@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt'
 
-const saltRounds = process.env.SALT_ROUND;
+const saltRounds = parseInt(process.env.SALT_ROUND);
 
 let cryptPassword = async function(password){ //permet de crypter une chaine de caractere
    let salt = await bcrypt.genSalt(saltRounds)
